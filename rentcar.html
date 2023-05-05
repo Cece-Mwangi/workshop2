@@ -1,0 +1,61 @@
+<html>
+  <head>
+    <title>Car Rental</title>
+  </head>
+  <body>
+    <nav>
+      <a href="index.html">Home</a>
+      <a>Book A Room</a>
+    </nav>
+    <main style="text-align: center">
+      <h1 style="text-align: center">ACME Car Rental</h1>
+      Pickup date: <input type="date" id="pickUp" />
+      <br />
+      <br />
+      Number of days:
+      <input type="number" id="numDays" />
+      <br />
+      <br />
+      Options
+      <br />
+      <input type="checkbox" id="tollTag" value="tollTag" />
+      <label for="tollTag">Electronic Toll Tag ($3.95/day)</label>
+      <br />
+      <input type="checkbox" id="GPS" value="GPS" />
+      <label for="GPS">GPS ($2.95/day)</label>
+      <br />
+      <input type="checkbox" id="roadside" value="roadside" />
+      <label for="roadside">Roadside Assistance ($2.95/day)</label>
+      <br />
+      <br />
+      Under 25
+      <br />
+      <input type="radio" id="no" name="under25" value="no" />
+      <label for="no">No</label>
+      <input type="radio" id="yes" name="under25" value="yes" />
+      <label for="yes">Yes</label>
+      <br />
+      <input id="Estimate" type="button" value="Estimate Total Cost" />
+      <br />
+      <table style="margin-left: auto; margin-right: auto">
+        <tr>
+          <td>Car rental:</td>
+          <td>$<span id="baseCost">0.00</span></td>
+        </tr>
+        <tr>
+          <td>Options:</td>
+          <td>$<span id="optionsCost">0.00</span></td>
+        </tr>
+        <tr id="under25SurchargeRow">
+          <td>Under 25 Surcharge:</td>
+          <td>$<span id="under25surcharge">0.00</span></td>
+        </tr>
+        <tr>
+          <td>Total due :</td>
+          <td>$<span id="totalDue">0.00</span></td>
+        </tr>
+      </table>
+      <script src="rentcar.js"></script>
+    </main>
+  </body>
+</html>
